@@ -21,7 +21,7 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return 10
+            return albumResults.count
         }else if section == 1 {
             return 8
         }else {
@@ -35,8 +35,9 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SingerCell.identifier, for: indexPath) as? SingerCell else {
                 return UICollectionViewCell()
             }
-             cell.backgroundColor = .clear
-             return cell
+            cell.backgroundColor = .clear
+            cell.setCell(self.albumResults[indexPath.item])
+            return cell
         }
           else if indexPath.section == 1 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecentCell.identifier, for: indexPath) as? RecentCell else {

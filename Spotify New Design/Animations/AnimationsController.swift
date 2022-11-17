@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 
-class AnimationsController: UIViewController {
+final class AnimationsController: UIViewController {
     
     var sView = AnimationsView()
 

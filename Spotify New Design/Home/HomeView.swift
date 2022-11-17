@@ -39,6 +39,15 @@ final class HomeView: UIView {
         return btn
     }()
     
+    let activityIndicator: UIActivityIndicatorView = {
+        let aiv = UIActivityIndicatorView(style: .large)
+        aiv.color = .black
+        aiv.hidesWhenStopped = true
+        return aiv
+    }()
+    
+    //MARK: - Initiliaze
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureCollectionView()
@@ -59,10 +68,12 @@ private extension HomeView {
     func configureCollectionView() {
         addSubview(collectionView)
         addSubview(button)
+        addSubview(activityIndicator)
         collectionView.fillSuperview()
+        activityIndicator.fillSuperview()
 
-        button.constrainHeight(constant: 40)
-        button.constrainWidth(constant: 40)
+        button.constrainHeight(constant: .sWdith*0.1)
+        button.constrainWidth(constant: .sWdith*0.1)
         button.topAnchor.constraint(equalTo: self.topAnchor, constant: 100).isActive = true
         button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
         

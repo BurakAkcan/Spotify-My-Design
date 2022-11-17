@@ -12,7 +12,7 @@ protocol DidFinishAnimation: AnyObject{
     func goHome()
 }
 
-class AnimationsView: UIView {
+final class AnimationsView: UIView {
     
     weak var delegate: DidFinishAnimation?
     

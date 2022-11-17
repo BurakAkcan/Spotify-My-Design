@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SingerCell: UICollectionViewCell {
     
@@ -27,6 +28,8 @@ class SingerCell: UICollectionViewCell {
         lbl.minimumScaleFactor = 0.3
         lbl.text = "Singer test"
         lbl.font = .systemFont(ofSize: 12, weight: .medium)
+        lbl.numberOfLines = 1
+        lbl.textAlignment = .center
         return lbl
     }()
     
@@ -48,8 +51,13 @@ class SingerCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setCell() {
+    public func setCell(_ item: AlbumResults) {
         //add some
+        print(item)
+        if let url = URL(string: item.artworkUrl100) {
+            imageView.kf.setImage(with: url)
+        }
+        singerNameLabel.text = item.name
     }
 }
  
@@ -66,8 +74,7 @@ private extension SingerCell {
 
             singerNameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 2),
             singerNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 2),
-            singerNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -2),
-            singerNameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -2)
+            singerNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -2)
         ])
         imageView.layoutIfNeeded()
     }
