@@ -89,7 +89,7 @@ private extension HomeView {
     
     static func sectionOne() -> NSCollectionLayoutSection {
         let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1/4), heightDimension: .fractionalHeight(1)))
-        item.contentInsets = .init(top: 0, leading: 4, bottom: 16, trailing:4)
+        item.contentInsets = .init(top: 0, leading: 4, bottom: 12, trailing:4)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.85), heightDimension: .fractionalHeight(1/6)), subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)

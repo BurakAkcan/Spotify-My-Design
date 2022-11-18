@@ -10,7 +10,7 @@ import Lottie
 
 final class AnimationsController: UIViewController {
     
-    var sView = AnimationsView()
+    let sView = AnimationsView()
 
     override func loadView() {
         super.loadView()

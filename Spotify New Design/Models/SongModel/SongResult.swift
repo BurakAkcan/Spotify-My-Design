@@ -8,18 +8,20 @@
 import Foundation
 
 struct SongResult: Codable {
-    let artistName, id, name, releaseDate: String
+    let artistName, id, name: String
     let artistID: String
     let artistURL: String
     let artworkUrl100: String
     let url: String
-    let contentAdvisoryRating: String?
     let genres: [SongGenre]
+   
+   // let genres: [SongGenre]
 
     enum CodingKeys: String, CodingKey {
-        case artistName, id, name, releaseDate
+        case artistName, id, name
         case artistID = "artistId"
         case artistURL = "artistUrl"
-        case artworkUrl100, url, contentAdvisoryRating,genres
+        case artworkUrl100, url
+         case genres
     }
 }

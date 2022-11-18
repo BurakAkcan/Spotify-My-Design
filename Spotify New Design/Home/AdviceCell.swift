@@ -21,4 +21,11 @@ class AdviceCell: HomeBaseCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func setCell(item: SongResult) {
+        if let url = URL(string: item.artworkUrl100){
+            imageView.kf.setImage(with: url)
+        }
+        contentLabel.text = item.genres[0].name.rawValue
+    }
 }

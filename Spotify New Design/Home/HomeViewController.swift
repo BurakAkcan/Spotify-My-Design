@@ -41,7 +41,6 @@ final class HomeViewController: UIViewController {
             case .success(let response):
                 self.songResults = response.feed.results
                 self.adviceList = response.feed.results.reversed()
-                print(self.songResults)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -64,7 +63,6 @@ final class HomeViewController: UIViewController {
             self.stopAnimating()
             self.sectionTitleList = ["Your favorite artist", "Recent played", "Made for you"]
             self.reloadCV()
-            
         }
     }
 }

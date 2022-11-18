@@ -43,7 +43,7 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecentCell.identifier, for: indexPath) as? RecentCell else {
                 return UICollectionViewCell()
             }
-              cell.setCell(item: songResults[indexPath.item])
+                  cell.setCell(item: songResults[indexPath.item])
             return cell
         }
         else {

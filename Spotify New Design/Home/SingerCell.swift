@@ -51,7 +51,6 @@ class SingerCell: UICollectionViewCell {
     
     public func setCell(_ item: AlbumResults) {
         //add some
-        print(item)
         if let url = URL(string: item.artworkUrl100) {
             imageView.kf.setImage(with: url)
         }

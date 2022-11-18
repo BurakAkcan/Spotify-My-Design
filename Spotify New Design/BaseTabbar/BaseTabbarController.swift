@@ -11,23 +11,11 @@ final class BaseTabbarController: UITabBarController {
     
     fileprivate lazy var defaultTabbarHeight = { tabBar.frame.size.height }()
     
-   
-    
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setTabbars()
     }
-    
-//   override func viewDidLayoutSubviews() {
-//        let newTabBarHeight = defaultTabbarHeight - 8
-//        var newFrame = tabBar.frame
-//        newFrame.size.height = newTabBarHeight
-//        newFrame.origin.y = view.frame.size.height - newTabBarHeight
-//        
-//        tabBar.frame = newFrame
-//    }
-    
     
     private func setTabbars() {
         viewControllers = [
@@ -36,7 +24,6 @@ final class BaseTabbarController: UITabBarController {
             createNavController(viewController: UIViewController(), imageName: "books.vertical"),
             createNavController(viewController: UIViewController(), imageName: "person.circle")
         ]
-        
         tabBar.tintColor = .systemGreen
         tabBar.backgroundColor = .clear
         tabBar.unselectedItemTintColor = .systemGray2.withAlphaComponent(0.4)
@@ -48,5 +35,14 @@ final class BaseTabbarController: UITabBarController {
        
         return navController
     }
-}
+ }
 
+//
+//class A {
+//    let a = BaseTabbarController()
+//    func test() {
+//        a.setTabbars()
+//       let _ =  a.createNavController(viewController: UIViewController(), imageName: "test")
+//
+//    }
+//}
