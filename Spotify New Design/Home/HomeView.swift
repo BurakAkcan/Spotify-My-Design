@@ -107,7 +107,7 @@ private extension HomeView {
     
     static func sectionTwo() -> NSCollectionLayoutSection {
         let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1/3), heightDimension: .fractionalHeight(1)))
-        item.contentInsets = .init(top: 0, leading: 6, bottom: 0, trailing: 6)
+        item.contentInsets = .init(top: 0, leading: 8, bottom: 0, trailing: 8)
         //fractional width düzeltilecek
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.85), heightDimension: .fractionalHeight(1/6)), subitems: [item])
         

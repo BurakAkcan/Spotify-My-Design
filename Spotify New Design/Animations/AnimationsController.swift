@@ -17,15 +17,12 @@ final class AnimationsController: UIViewController {
         view = sView
         sView.delegate = self
     }
-
 }
-
 
 extension AnimationsController: DidFinishAnimation {
     func goHome() {
         let baseTabbar = BaseTabbarController()
         baseTabbar.modalPresentationStyle = .fullScreen
-        sView.delegate = nil
         present(baseTabbar, animated: false)
     }
 }

@@ -16,9 +16,6 @@ class SingerCell: UICollectionViewCell {
        let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
-        iv.backgroundColor = .yellow
-        
-
         return iv
     }()
     
@@ -28,13 +25,14 @@ class SingerCell: UICollectionViewCell {
         lbl.minimumScaleFactor = 0.3
         lbl.text = "Singer test"
         lbl.font = .systemFont(ofSize: 12, weight: .medium)
-        lbl.numberOfLines = 1
+        lbl.numberOfLines = 2
         lbl.textAlignment = .center
         return lbl
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .clear
         configureCell()
     }
     
@@ -57,7 +55,8 @@ class SingerCell: UICollectionViewCell {
         if let url = URL(string: item.artworkUrl100) {
             imageView.kf.setImage(with: url)
         }
-        singerNameLabel.text = item.name
+        let seperateName = item.name.components(separatedBy: "Essentials")
+        singerNameLabel.text = seperateName[0]
     }
 }
  

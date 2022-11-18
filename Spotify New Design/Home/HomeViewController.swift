@@ -11,11 +11,10 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     //MARK: - Properties
-    let sectionTitleList: [String] = [
-        "Your favorite artist", "Recent played", "Made for you"
-    ]
+    var sectionTitleList: [String]?
     var songResults: [SongResult] = []
     var albumResults: [AlbumResults] = []
+    var adviceList:[SongResult] = []
     
     //MARK: - Outputs
     var sView = HomeView()
@@ -41,6 +40,7 @@ final class HomeViewController: UIViewController {
             switch result {
             case .success(let response):
                 self.songResults = response.feed.results
+                self.adviceList = response.feed.results.reversed()
                 print(self.songResults)
             case .failure(let error):
                 print(error.localizedDescription)
@@ -62,7 +62,9 @@ final class HomeViewController: UIViewController {
         
         dispatchGroup.notify(queue: .main) {
             self.stopAnimating()
+            self.sectionTitleList = ["Your favorite artist", "Recent played", "Made for you"]
             self.reloadCV()
+            
         }
     }
 }

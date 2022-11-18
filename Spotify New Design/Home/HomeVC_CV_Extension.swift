@@ -23,9 +23,10 @@ extension HomeViewController: UICollectionViewDataSource {
         if section == 0 {
             return albumResults.count
         }else if section == 1 {
-            return 8
+            return songResults.count
         }else {
-            return 12
+            
+            return adviceList.count
         }
     }
     
@@ -35,7 +36,6 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SingerCell.identifier, for: indexPath) as? SingerCell else {
                 return UICollectionViewCell()
             }
-            cell.backgroundColor = .clear
             cell.setCell(self.albumResults[indexPath.item])
             return cell
         }
@@ -43,14 +43,14 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecentCell.identifier, for: indexPath) as? RecentCell else {
                 return UICollectionViewCell()
             }
-            
+              cell.setCell(item: songResults[indexPath.item])
             return cell
         }
         else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdviceCell.identifier, for: indexPath) as? AdviceCell else {
                 return UICollectionViewCell()
             }
-            
+            cell.setCell(item: adviceList[indexPath.item])
             return cell
         }
        
@@ -60,7 +60,10 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.identifier, for: indexPath) as? HeaderView else {
             return UICollectionReusableView()
         }
-        header.setSectionTitle(title: sectionTitleList[indexPath.section])
+        if let sectionTitleList = sectionTitleList {
+            header.setSectionTitle(title: sectionTitleList[indexPath.section])
+        }
+       
         return header
     }
     

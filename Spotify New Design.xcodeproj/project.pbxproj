@@ -152,6 +152,14 @@
 			path = AlbumModel;
 			sourceTree = "<group>";
 		};
+		5420E5C82926D2BB001604D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54F8075E2922C91F0088DD8C /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		543030602925033200E324C6 /* BaseTabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,16 +196,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		547204DA2926229C0024F6C5 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				54F807752922E34D0088DD8C /* Assets */,
-				54F807692922C91F0088DD8C /* LaunchScreen.storyboard */,
-				54F8075E2922C91F0088DD8C /* AppDelegate.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		54F807522922C91F0088DD8C = {
 			isa = PBXGroup;
 			children = (
@@ -219,9 +217,9 @@
 		54F8075D2922C91F0088DD8C /* Spotify New Design */ = {
 			isa = PBXGroup;
 			children = (
+				5420E5C82926D2BB001604D3 /* Resources */,
 				5420E5B52926996A001604D3 /* Models */,
 				5420E5AB29269299001604D3 /* Services */,
-				547204DA2926229C0024F6C5 /* App */,
 				54345FA829239DE300C21851 /* Animations */,
 				543030602925033200E324C6 /* BaseTabbar */,
 				54345FAB2923A57500C21851 /* Extensions */,
@@ -235,6 +233,8 @@
 		54F807722922C93E0088DD8C /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				54F807752922E34D0088DD8C /* Assets */,
+				54F807692922C91F0088DD8C /* LaunchScreen.storyboard */,
 				54F8076C2922C91F0088DD8C /* Info.plist */,
 			);
 			path = Support;

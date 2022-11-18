@@ -18,7 +18,7 @@ final class AnimationsView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = #colorLiteral(red: 0.0003598765179, green: 0.5511925817, blue: 0.01931053773, alpha: 1)
+        self.backgroundColor = #colorLiteral(red: 0, green: 0.6701206565, blue: 0, alpha: 1)
         setAnimation()
         
     }
@@ -35,8 +35,8 @@ final class AnimationsView: UIView {
         lottieView.contentMode = .scaleAspectFit
         lottieView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(lottieView)
-        lottieView.backgroundColor = #colorLiteral(red: 0.0003598765179, green: 0.5511925817, blue: 0.01931053773, alpha: 1)
-        lottieView.animationSpeed = 10
+        lottieView.backgroundColor = #colorLiteral(red: 0, green: 0.6701206565, blue: 0, alpha: 1)
+        lottieView.animationSpeed = 1.5
         lottieView.fillSuperview()
         lottieView.constrainWidth(constant: .sWdith)
         lottieView.constrainHeight(constant: .sWdith)

@@ -14,7 +14,6 @@ class HeaderView: UICollectionReusableView {
        let label = UILabel()
         label.numberOfLines = 1
         label.font = .boldSystemFont(ofSize: 18)
-        label.text = "Test Header"
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label

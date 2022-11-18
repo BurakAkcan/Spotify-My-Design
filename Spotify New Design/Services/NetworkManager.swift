@@ -17,7 +17,7 @@ final class NetworkManager {
         return components
     }
     
-    class func request<T: Decodable> (endpoint: API, completion: @escaping (Result<T,Error>)->Void){
+   final class func request<T: Decodable> (endpoint: API, completion: @escaping (Result<T,Error>)->Void){
         let components = buildURL(endpoint: endpoint)
         guard let url = components.url else {
             print("url creation error")
