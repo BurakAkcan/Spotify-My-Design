@@ -14,8 +14,6 @@ struct SongResult: Codable {
     let artworkUrl100: String
     let url: String
     let genres: [SongGenre]
-   
-   // let genres: [SongGenre]
 
     enum CodingKeys: String, CodingKey {
         case artistName, id, name

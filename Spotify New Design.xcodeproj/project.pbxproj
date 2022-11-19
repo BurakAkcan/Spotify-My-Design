@@ -29,8 +29,6 @@
 		54345FB72923CE4600C21851 /* HomeVC_CV_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54345FB62923CE4600C21851 /* HomeVC_CV_Extension.swift */; };
 		54629940292406EF00264CD6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462993F292406EF00264CD6 /* HeaderView.swift */; };
 		54629942292415E600264CD6 /* SingerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54629941292415E600264CD6 /* SingerCell.swift */; };
-		546299452924184400264CD6 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546299442924184400264CD6 /* VerticalStackView.swift */; };
-		546299472924185C00264CD6 /* HorizontolStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546299462924185C00264CD6 /* HorizontolStackView.swift */; };
 		5462994929243C4500264CD6 /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462994829243C4500264CD6 /* RecentCell.swift */; };
 		54E3941129237E1D00A7B8AE /* AnimationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3941029237E1D00A7B8AE /* AnimationsController.swift */; };
 		54F8075F2922C91F0088DD8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F8075E2922C91F0088DD8C /* AppDelegate.swift */; };
@@ -65,8 +63,6 @@
 		54345FB62923CE4600C21851 /* HomeVC_CV_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC_CV_Extension.swift; sourceTree = "<group>"; };
 		5462993F292406EF00264CD6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		54629941292415E600264CD6 /* SingerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerCell.swift; sourceTree = "<group>"; };
-		546299442924184400264CD6 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
-		546299462924185C00264CD6 /* HorizontolStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontolStackView.swift; sourceTree = "<group>"; };
 		5462994829243C4500264CD6 /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
 		54E3941029237E1D00A7B8AE /* AnimationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsController.swift; sourceTree = "<group>"; };
 		54F8075B2922C91F0088DD8C /* Spotify New Design.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify New Design.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,15 +183,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		546299432924182C00264CD6 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				546299442924184400264CD6 /* VerticalStackView.swift */,
-				546299462924185C00264CD6 /* HorizontolStackView.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		54F807522922C91F0088DD8C = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +212,6 @@
 				5420E5C82926D2BB001604D3 /* Resources */,
 				5420E5AB29269299001604D3 /* Services */,
 				54F807722922C93E0088DD8C /* Support */,
-				546299432924182C00264CD6 /* Utilities */,
 			);
 			path = "Spotify New Design";
 			sourceTree = "<group>";
@@ -390,10 +376,8 @@
 			files = (
 				54345FAD2923A58700C21851 /* CGFloat + Extension.swift in Sources */,
 				5420E5C02926C1A5001604D3 /* AlbumAPI.swift in Sources */,
-				546299472924185C00264CD6 /* HorizontolStackView.swift in Sources */,
 				543030622925070000E324C6 /* BaseTabbarController.swift in Sources */,
 				5420E5B42926967A001604D3 /* SongAPI.swift in Sources */,
-				546299452924184400264CD6 /* VerticalStackView.swift in Sources */,
 				5404129F2926636100C9E09E /* HomeBaseCell.swift in Sources */,
 				54629942292415E600264CD6 /* SingerCell.swift in Sources */,
 				54629940292406EF00264CD6 /* HeaderView.swift in Sources */,

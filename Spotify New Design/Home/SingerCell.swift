@@ -41,16 +41,13 @@ class SingerCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = min(imageView.frame.width/2, imageView.frame.height/2)
         imageView.layer.masksToBounds = true
-        
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     public func setCell(_ item: AlbumResults) {
-        //add some
         if let url = URL(string: item.artworkUrl100) {
             imageView.kf.setImage(with: url)
         }

@@ -61,9 +61,7 @@ class HomeBaseCell: UICollectionViewCell {
             contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -2),
             contentLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -2)
         ])
-        //imageView.layoutIfNeeded()
     }
-    
 }
 
 

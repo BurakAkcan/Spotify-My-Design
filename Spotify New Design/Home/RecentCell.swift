@@ -10,7 +10,5 @@ import UIKit
 class RecentCell: HomeBaseCell {
     
     static let identifier = String(describing: RecentCell.self)
-    
-
 }
 

@@ -36,13 +36,3 @@ final class BaseTabbarController: UITabBarController {
         return navController
     }
  }
-
-//
-//class A {
-//    let a = BaseTabbarController()
-//    func test() {
-//        a.setTabbars()
-//       let _ =  a.createNavController(viewController: UIViewController(), imageName: "test")
-//
-//    }
-//}

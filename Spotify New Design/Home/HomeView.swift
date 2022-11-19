@@ -63,6 +63,8 @@ final class HomeView: UIView {
     }
 }
 
+//MARK: - Extensions
+
 private extension HomeView {
     
     func configureCollectionView() {

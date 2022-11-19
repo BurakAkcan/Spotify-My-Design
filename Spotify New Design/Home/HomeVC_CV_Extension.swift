@@ -53,7 +53,6 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.setCell(item: adviceList[indexPath.item])
             return cell
         }
-       
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -63,9 +62,6 @@ extension HomeViewController: UICollectionViewDataSource {
         if let sectionTitleList = sectionTitleList {
             header.setSectionTitle(title: sectionTitleList[indexPath.section])
         }
-       
-        return header
+       return header
     }
-    
-    
 }
